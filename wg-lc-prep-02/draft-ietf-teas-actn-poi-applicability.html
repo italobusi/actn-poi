@@ -1299,6 +1299,11 @@ Controllers Interface)in the ACTN architecture.<a href="#section-abstract-2" cla
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7.2.1">
+                <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="auto internal xref">7.1</a>.  <a href="#name-lldp-snooping-security-cons" class="internal xref">LLDP Snooping Security Considerations</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
             <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-operational-considerations" class="internal xref">Operational Considerations</a></p>
@@ -3837,6 +3842,49 @@ supports an Access Control Model (NACM), and RESCONF supports Role
 Based Access Control (RBAC), which should also ensure that MDSC to
 PNC communication is based on authorised use and granular control of
 connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a></p>
+<div id="lldp-snooping-security-considerations">
+<section id="section-7.1">
+        <h3 id="name-lldp-snooping-security-cons">
+<a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-lldp-snooping-security-cons" class="section-name selfRef">LLDP Snooping Security Considerations</a>
+        </h3>
+<p id="section-7.1-1">Earlier in the document, LLDP is discussed as a mechanism for the PNCs to discover the intra-domain Ethernet and IP links. While LLDP provides valuable information for network management and troubleshooting, it also presents several security issues:<a href="#section-7.1-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-7.1-2.1">
+            <p id="section-7.1-2.1.1">Eavesdropping: LLDP transmissions are not encrypted. Potentially, LLDP packets could be captured using a packet sniffer. An attacker can leverage this information to gain insights into the network topology, device types, and configurations, which could be used for further attacks;<a href="#section-7.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-2.2">
+            <p id="section-7.1-2.2.1">Unauthorized Access: Information disclosed by LLDP can include device types, software versions, and network configuration details. This might help an attacker identify vulnerable devices or configurations that can be exploited to gain unauthorized access or escalate privileges within the network;<a href="#section-7.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-2.3">
+            <p id="section-7.1-2.3.1">Data Manipulation: If an attacker gains access to a network device, they could manipulate LLDP information to advertise false device information, leading to potential misconfigurations or trust relationships being exploited. This can disrupt network operations or redirect traffic to malicious devices;<a href="#section-7.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-2.4">
+            <p id="section-7.1-2.4.1">Denial of Service (DoS): By flooding the network with fake LLDP packets, an attacker could overwhelm network devices or management systems, potentially leading to a denial of service where legitimate network traffic is disrupted;<a href="#section-7.1-2.4.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-2.5">
+            <p id="section-7.1-2.5.1">Spoofing: An attacker could spoof LLDP packets to impersonate other network devices. Potentially, this might lead to incorrect network mappings or trust relationships being established with malicious devices;<a href="#section-7.1-2.5.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-2.6">
+            <p id="section-7.1-2.6.1">Lack of Authentication: LLDP does not include mechanisms for authenticating the source of LLDP messages, which means that devices accept LLDP information from any source as legitimate.<a href="#section-7.1-2.6.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-7.1-3">To mitigate these security issues, network administrators might implement several security measures, including:<a href="#section-7.1-3" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-7.1-4.1">
+            <p id="section-7.1-4.1.1">Disabling LLDP on ports where it is not needed, especially those facing untrusted networks;<a href="#section-7.1-4.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-4.2">
+            <p id="section-7.1-4.2.1">Using network segmentation and Access Control Lists (ACLs) to limit who can send and receive LLDP packets;<a href="#section-7.1-4.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-4.3">
+            <p id="section-7.1-4.3.1">Employing network monitoring and anomaly detection systems to identify unusual LLDP traffic patterns that may indicate an attack;<a href="#section-7.1-4.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-7.1-4.4">
+            <p id="section-7.1-4.4.1">Regularly updating and patching network devices to address known vulnerabilities that could be exploited through information gathered via LLDP.<a href="#section-7.1-4.4.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+</section>
+</div>
 </section>
 </div>
 <div id="operational-considerations">
