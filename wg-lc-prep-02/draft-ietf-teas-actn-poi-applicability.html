@@ -3803,7 +3803,7 @@ support scenarios where multiple parallel TE paths are used in load-balancing to
 traffic between two PEs).<a href="#section-6-6" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security-considerations">
+<div id="security">
 <section id="section-7">
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
@@ -3844,10 +3844,22 @@ connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a>
       <h2 id="name-operational-considerations">
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-operational-considerations" class="section-name selfRef">Operational Considerations</a>
       </h2>
-<p id="section-8-1">Telemetry data, such as collecting lower-layer networking health and
-consideration of network and service performance from POI domain
-controllers, may be required. These requirements and capabilities
-will be discussed in future versions of this document.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-8-1">This document has identified the need and enabling components for automating the management and control of multi-layer Service Providers' transport networks, combining the optical and microwave transport layer with the packet (IP/MPLS) layer to create a more efficient and scalable network infrastructure. This approach is particularly beneficial for Service Providers and large enterprises dealing with high bandwidth demands and looking for cost-effective ways to expand their networks. However, integrating these two traditionally separate network layers involves several operational considerations:<a href="#section-8-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-8-2.1">
+          <p id="section-8-2.1.1">Network Design and Capacity Planning: Deciding the degree of integration between the packet and optical layers is critical. Furthermore, this includes determining whether to pursue a loose integration (keeping layers distinct but coordinated) or a tight integration (combining layers more closely, potentially at the hardware level) coordinated via the MDSC. Accurate forecasting and planning will also be essential to ensure that the integrated ACTN infrastructure can handle future capacity demand without excessive over-provisioning;<a href="#section-8-2.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-8-2.2">
+          <p id="section-8-2.2.1">System Interoperability: Networks often comprise equipment from various vendors. Ensuring that packet and optical devices can interoperate seamlessly and the PNCs can manage them is crucial for a successful integration. The Service Provider must also check with the vendors to ensure they support the IETF-based technologies outlined in this document;<a href="#section-8-2.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-8-2.3">
+          <p id="section-8-2.3.1">Performance Monitoring: The integrated POI network will require comprehensive monitoring solutions that can provide visibility to the PNCs across both packet and optical layers. Identifying and diagnosing issues may become more complex with integrated layers. Telemetry data may also be required to collect lower-layer networking health and consider network and service performance. This topic is further discussed in [ACTN Assurance];<a href="#section-8-2.3.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-8-2.4">
+          <p id="section-8-2.4.1">Fault Management and Recovery: The POI networks should be resilient, including considerations for automatic protection switching and fast reroute mechanisms that span both layers. Fault isolation and recovery may become more challenging, as issues in one layer can have cascading effects on the other. Effective fault management strategies must be in place to quickly identify and rectify such issues. This topic is further discussed in [ACTN Assurance];<a href="#section-8-2.4.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="section-8-3">Specific Security Considerations are discussed in <a href="#security" class="auto internal xref">Section 7</a>.<a href="#section-8-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
