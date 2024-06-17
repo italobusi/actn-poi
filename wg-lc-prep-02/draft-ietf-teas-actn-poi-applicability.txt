@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 28 November 2024                                       Vodafone
+Expires: 19 December 2024                                       Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                             27 May 2024
+                                                            17 June 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 November 2024.
+   This Internet-Draft will expire on 19 December 2024.
 
 Copyright Notice
 
@@ -600,8 +600,10 @@ Table of Contents
       the binding SID) are used for the inter-domain TE path stitching;
 
    *  each packet domain in Figure 2 uses technology-specific local
-      protection mechanisms (in the case of SR-TE, TI-LFA), with the
-      awareness of multi-layer TE path properties (e.g., SRLG).
+      protection mechanisms (such as Fast Reroute (FRR) in case of MPLS-
+      TE or Topology Independent Loop-free Alternate Fast Reroute (TI-
+      LFA) in case of SR-TE), with the awareness of multi-layer TE path
+      properties (e.g., SRLG).
 
    In the case of inter-domain TE-paths, it is also assumed that each
    packet domain in Figure 2 and Figure 3 implements the same TE
@@ -2321,11 +2323,12 @@ Table of Contents
    further discuss whether to put this text here or in Section 5.2).
 
    The MDSC also request the P-PNC to configure local protection
-   mechanisms.  For example, in case of SR-TE domain, the TI-LFA local
-   protection, as defined in [I-D.ietf-rtgwg-segment-routing-ti-lfa]:
-   the mechanisms to request the configuration TI-LFA local protection
-   for SR-TE paths using the [I-D.ietf-teas-yang-te] are a gap in the
-   current YANG models.
+   mechanisms.  For example, the FRR local protection, as defined in
+   [RFC4090] in case of MPLS-TE domain or the TI-LFA local protection,
+   as defined in [I-D.ietf-rtgwg-segment-routing-ti-lfa] in case of SR-
+   TE domain.  The mechanisms to request the configuration TI-LFA local
+   protection for SR-TE paths using the [I-D.ietf-teas-yang-te] are a
+   gap in the current YANG models.
 
    The requested local protection mechanisms within the P-PNC domain are
    configured by the P-PNC through implementation specific mechanisms
@@ -2334,8 +2337,9 @@ Table of Contents
    The P-PNC takes into account the multi-layer TE path properties
    (e.g., SRLG information), configured by the MDSC as described in
    Section 5.2.3, when computing the protection configuration (e.g., in
-   case of SR-TE domains, the TI-LFA post-convergence path for multi-
-   layer single-domain IP links).
+   case of SR-TE domains, the TI-LFA post-convergence path or, in case
+   of MPLS-TE domain, the FRR backup tunnel) for multi-layer single-
+   domain IP links.
 
    SR-TE path setup and update (e.g., bandwidth increase) through MPI is
    identified as a gap requiring further work, which is outside of the
@@ -2506,9 +2510,9 @@ Table of Contents
    [I-D.ietf-ccamp-otn-tunnel-model]
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
               "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
-              draft-ietf-ccamp-otn-tunnel-model-20, 24 November 2023,
+              draft-ietf-ccamp-otn-tunnel-model-21, 6 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-tunnel-model-20>.
+              otn-tunnel-model-21>.
 
    [I-D.ietf-ccamp-wdm-tunnel-yang]
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
@@ -2698,9 +2702,9 @@ Table of Contents
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
               Yoon, "A YANG Data Model for Virtual Network (VN)
               Operations", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-vn-yang-25, 16 May 2024,
+              teas-actn-vn-yang-28, 8 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-vn-yang-25>.
+              actn-vn-yang-28>.
 
    [I-D.ietf-teas-te-service-mapping-yang]
               Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
@@ -2723,6 +2727,11 @@ Table of Contents
               selection, and registration of an Autonomous System (AS)",
               BCP 6, RFC 1930, DOI 10.17487/RFC1930, March 1996,
               <https://www.rfc-editor.org/rfc/rfc1930>.
+
+   [RFC4090]  Pan, P., Ed., Swallow, G., Ed., and A. Atlas, Ed., "Fast
+              Reroute Extensions to RSVP-TE for LSP Tunnels", RFC 4090,
+              DOI 10.17487/RFC4090, May 2005,
+              <https://www.rfc-editor.org/rfc/rfc4090>.
 
    [RFC5440]  Vasseur, JP., Ed. and JL. Le Roux, Ed., "Path Computation
               Element (PCE) Communication Protocol (PCEP)", RFC 5440,
