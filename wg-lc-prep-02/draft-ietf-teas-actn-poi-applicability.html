@@ -1239,7 +1239,7 @@ Controllers Interface)in the ACTN architecture.<a href="#section-abstract-2" cla
                 <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-inter-domain-link-discovery" class="internal xref">Inter-domain Link Discovery</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5.2.1">
-                    <p id="section-toc.1-1.4.2.5.2.1.1"><a href="#section-4.5.1" class="auto internal xref">4.5.1</a>.  <a href="#name-cross-technology-link-disco" class="internal xref">Cross-technology link Discovery</a></p>
+                    <p id="section-toc.1-1.4.2.5.2.1.1"><a href="#section-4.5.1" class="auto internal xref">4.5.1</a>.  <a href="#name-cross-technology-ethernet-l" class="internal xref">Cross-technology Ethernet link Discovery</a></p>
 </li>
                   <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5.2.2">
                     <p id="section-toc.1-1.4.2.5.2.2.1"><a href="#section-4.5.2" class="auto internal xref">4.5.2</a>.  <a href="#name-inter-domain-ip-link-discov" class="internal xref">Inter-domain IP Link Discovery</a></p>
@@ -1638,7 +1638,7 @@ Ethernet or IP links within this document;<a href="#section-2-8.2.2.1.1" class="
 </li>
             <li class="normal" id="section-2-8.2.2.2">
               <p id="section-2-8.2.2.2.1">between packet and optical domains (i.e., between routers and
-optical nodes): these links are called Cross-technology links within
+optical nodes): these links are called cross-technology Ethernet links within
 this document;<a href="#section-2-8.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-2-8.2.2.3">
@@ -2505,7 +2505,7 @@ inventory/topology/service change occurs.<a href="#section-4-7" class="pilcrow">
 <p id="section-4-8">It should also be possible to correlate information from IP and
 optical layers (e.g., which port, lambda/OTSi, and direction are used
 by a specific IP service on the WDM equipment).<a href="#section-4-8" class="pilcrow">¶</a></p>
-<p id="section-4-9">In particular, for the cross-technology links, it is key for MDSC to
+<p id="section-4-9">In particular, for the cross-technology Ethernet links, it is key for MDSC to
 automatically correlate the information from the PNC network
 databases about the physical ports from the routers (single link or
 bundle links for LAG) to client ports in the ROADM.<a href="#section-4-9" class="pilcrow">¶</a></p>
@@ -2583,12 +2583,12 @@ ROADMs.<a href="#section-4.1-10.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-4.1-11">The OTN Topology Model also reports the CBR client LTPs that
-terminates the Cross-technology links: once CBR client LTP is reported for
+terminates the cross-technology Ethernet links: once CBR client LTP is reported for
 each CBR or multi-function client interface on the optical nodes (see
 sections 4.4 and 5.1 of <span>[<a href="#I-D.ietf-ccamp-transport-nbi-app-statement" class="cite xref">I-D.ietf-ccamp-transport-nbi-app-statement</a>]</span> for the description of multi-function
 client interfaces).<a href="#section-4.1-11" class="pilcrow">¶</a></p>
 <p id="section-4.1-12">The Ethernet Topology Model reports the Ethernet client LTPs that
-terminate the Cross-technology links: one Ethernet client LTP is reported
+terminate the cross-technology Ethernet links: one Ethernet client LTP is reported
 for each Ethernet or multi-function client interface on the optical
 nodes.<a href="#section-4.1-12" class="pilcrow">¶</a></p>
 <p id="section-4.1-13">The optical transponders and, optionally, the OTN access cards, are
@@ -2600,7 +2600,7 @@ are physically located on a device external to the WDM node since it
 both cases the optical transponders and the WDM node are under the
 control of the same O-PNC and abstracted as a single WDM TE Node at the O-MPI.<a href="#section-4.1-13" class="pilcrow">¶</a></p>
 <p id="section-4.1-14">The association between the Ethernet or CBR client LTPs terminating
-the Ethernet Cross-technology links and the optical TTPs is reported using
+the Ethernet cross-technology Ethernet links and the optical TTPs is reported using
 the Inter Layer Lock-id (ILL) identifiers, defined in <span>[<a href="#RFC8795" class="cite xref">RFC8795</a>]</span>.<a href="#section-4.1-14" class="pilcrow">¶</a></p>
 <p id="section-4.1-15">For example, with a reference to <a href="#fig-optical-topo" class="auto internal xref">Figure 5</a>, the ILL values X and Y are
 used to associated the client LTPs (7-0) in NE11 and (8-0) in NE12
@@ -2711,7 +2711,7 @@ topology also reports the IP LTPs terminating the inter-domain IP
 links.<a href="#section-4.3-5" class="pilcrow">¶</a></p>
 <p id="section-4.3-6">The Ethernet Topology Model is used to report the intra-domain
 Ethernet links supporting the intra-domain IP links as well as the
-Ethernet LTPs that might terminate Cross-technology links, inter-domain
+Ethernet LTPs that might terminate cross-technology Ethernet links, inter-domain
 Ethernet links or access links, as described in detail in <a href="#inter-domain-link-discovery" class="auto internal xref">Section 4.5</a>
 and in <a href="#multi-technology-link-discovery" class="auto internal xref">Section 4.6</a>.<a href="#section-4.3-6" class="pilcrow">¶</a></p>
 <p id="section-4.3-7">All the intra-domain Ethernet and IP links are discovered by the
@@ -2765,7 +2765,7 @@ inter-domain links:<a href="#section-4.5-1" class="pilcrow">¶</a></p>
 between two adjacent IP domains;<a href="#section-4.5-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-4.5-2.2">
-            <p id="section-4.5-2.2.1">Cross-technology links between an an IP domain and an adjacent optical
+            <p id="section-4.5-2.2.1">Cross-technology Ethernet links between an an IP domain and an adjacent optical
 domain;<a href="#section-4.5-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-4.5-2.3">
@@ -2774,7 +2774,7 @@ domain;<a href="#section-4.5-2.2.1" class="pilcrow">¶</a></p>
         </ul>
 <p id="section-4.5-3">All the three types of links are Ethernet links.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
 <p id="section-4.5-4">It is worth noting that the P-PNC may not be aware whether an
-Ethernet interface terminates a Cross-technology link, an inter-domain
+Ethernet interface terminates a cross-technology Ethernet link, an inter-domain
 Ethernet link or an access link. The TE Topology Model supports the
 discovery for all these types of links with no need for the P-PNC to
 know the type of inter-domain link.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
@@ -2784,7 +2784,7 @@ Attachment Points (SAP) Model, defined in  <span>[<a href="#RFC9408" class="cite
 <p id="section-4.5-6">Although the discovery of access links is outside the scope of this
 document, clarifying the relationship between these two models has
 been identified as a gap.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
-<p id="section-4.5-7">The inter-domain Ethernet links and Cross-technology links are discovered
+<p id="section-4.5-7">The inter-domain Ethernet links and cross-technology Ethernet links are discovered
 by the MDSC using the plug-id attribute, as described in section 4.3
 of <span>[<a href="#RFC8795" class="cite xref">RFC8795</a>]</span>.<a href="#section-4.5-7" class="pilcrow">¶</a></p>
 <p id="section-4.5-8">More detailed description of how the plug-id can be used to discover
@@ -2809,7 +2809,7 @@ the Chassis ID and Port ID mandatory TLVs, is implementation specific
 and needs to be consistent across all the PNCs within the network.<a href="#section-4.5-13" class="pilcrow">¶</a></p>
 <p id="section-4.5-14">The static configuration requires an administrative burden to
 configure network-wide unique identifiers: it is therefore more
-viable for inter-domain Ethernet links. For the Cross-technology links, the
+viable for inter-domain Ethernet links. For the cross-technology Ethernet links, the
 automatic discovery solution based on LLDP snooping is preferable
 when possible.<a href="#section-4.5-14" class="pilcrow">¶</a></p>
 <p id="section-4.5-15">The routers exchange standard LLDP packets as defined in <span>[<a href="#IEEE_802.1AB" class="cite xref">IEEE_802.1AB</a>]</span>
@@ -2820,17 +2820,17 @@ information, such as the Chassis ID, the Port ID, System Name TLVs.<a href="#sec
 packet exchange and does not send any LLDP packets.<a href="#section-4.5-16" class="pilcrow">¶</a></p>
 <div id="cross-technology-link-discovery">
 <section id="section-4.5.1">
-          <h4 id="name-cross-technology-link-disco">
-<a href="#section-4.5.1" class="section-number selfRef">4.5.1. </a><a href="#name-cross-technology-link-disco" class="section-name selfRef">Cross-technology link Discovery</a>
+          <h4 id="name-cross-technology-ethernet-l">
+<a href="#section-4.5.1" class="section-number selfRef">4.5.1. </a><a href="#name-cross-technology-ethernet-l" class="section-name selfRef">Cross-technology Ethernet link Discovery</a>
           </h4>
-<p id="section-4.5.1-1">The MDSC can discover a Cross-technology link by matching the plug-id
+<p id="section-4.5.1-1">The MDSC can discover a cross-technology Ethernet link by matching the plug-id
 values of the two LTPs reported by two adjacent O-PNC and P-PNC: in
 case LLDP snooping is used, the P-PNC reports the LLDP information
 sent by the corresponding Ethernet interface on the IP router while the
 O-PNC reports the LLDP information received by the corresponding
 Ethernet interface on the optical node, e.g., between LTP 5-0 on PE13
 and LTP 7-0 on NE11, as shown in <a href="#fig-cross-technology-link" class="auto internal xref">Figure 6</a>.<a href="#section-4.5.1-1" class="pilcrow">¶</a></p>
-<span id="name-cross-technology-ethernet-l"></span><div id="fig-cross-technology-link">
+<span id="name-cross-technology-ethernet-li"></span><div id="fig-cross-technology-link">
 <figure id="figure-6">
             <div class="alignLeft art-ascii-art art-text artwork" id="section-4.5.1-2.1">
 <pre>
@@ -2866,14 +2866,14 @@ Legenda:
 </pre>
 </div>
 <figcaption><a href="#figure-6" class="selfRef">Figure 6</a>:
-<a href="#name-cross-technology-ethernet-l" class="selfRef">Cross-technology Ethernet link discovery</a>
+<a href="#name-cross-technology-ethernet-li" class="selfRef">Cross-technology Ethernet link discovery</a>
             </figcaption></figure>
 </div>
-<p id="section-4.5.1-3">As described in <a href="#optical-topology-discovery" class="auto internal xref">Section 4.1</a>, the LTP terminating a Cross-technology link
+<p id="section-4.5.1-3">As described in <a href="#optical-topology-discovery" class="auto internal xref">Section 4.1</a>, the LTP terminating a cross-technology Ethernet link
 is reported by an O-PNC in the Ethernet topology or in the OTN
 topology model or in both models, depending on the type of
 corresponding physical port on the optical node.<a href="#section-4.5.1-3" class="pilcrow">¶</a></p>
-<p id="section-4.5.1-4">It is worth noting that the discovery of Cross-technology links is based
+<p id="section-4.5.1-4">It is worth noting that the discovery of cross-technology Ethernet links is based
 only on the LLDP information sent by the Ethernet interfaces of the
 routers and snooped by the Ethernet interfaces of the optical nodes.
 Therefore the MDSC can discover these links also before optical
@@ -2944,7 +2944,7 @@ Legenda:
 the plug-id attribute of the Ethernet LTPs to discover cross-technology Ethernet
 links and inter-domain Ethernet links.<a href="#section-4.5.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.5.2-4">If the P-PNC does not know a priori whether an Ethernet interface on
-an IP router terminates a Cross-technology link or an inter-domain Ethernet
+an IP router terminates a cross-technology Ethernet link or an inter-domain Ethernet
 link, it has to report at the MPI two Ethernet LTPs representing the
 same Ethernet interface, e.g., both the Ethernet LTP 3-0 and the
 Ethernet LTP 3-1, supported by LTP 3-0, shown in <a href="#fig-inter-domain-link" class="auto internal xref">Figure 7</a>:<a href="#section-4.5.2-4" class="pilcrow">¶</a></p>
@@ -3087,7 +3087,7 @@ links are discovered by the PNC.<a href="#section-4.6-3" class="pilcrow">¶</a><
 terminate the cross-technology Ethernet links supporting the multi-technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and the
 Ethernet LTP 6-0 on BR11, shown in <a href="#fig-multi-technology-link" class="auto internal xref">Figure 8</a>.<a href="#section-4.6-4" class="pilcrow">¶</a></p>
 <p id="section-4.6-5">The MDSC discovers, using the mechanisms described in <a href="#inter-domain-link-discovery" class="auto internal xref">Section 4.5</a>,
-which Ethernet Cross-technology links support the multi-technology intra-domain
+which cross-technology Ethernet links support the multi-technology intra-domain
 Ethernet links, e.g., the link between LTP 5-0 on PE13 and LTP 7-0 on
 NE11, shown in <a href="#fig-multi-technology-link" class="auto internal xref">Figure 8</a>.<a href="#section-4.6-5" class="pilcrow">¶</a></p>
 <p id="section-4.6-6">The MDSC also discovers, from the information provided by the O-PNC
@@ -3249,12 +3249,12 @@ can be configured on a LAG group (Aggregated Port) and/or on any
 number of its LAG members (Aggregation Ports).<a href="#section-4.7-8" class="pilcrow">¶</a></p>
 <p id="section-4.7-9">If LLDP is enabled on both LAG members and groups, two types of LLDP
 packets are transmitted by the routers and received by the optical
-nodes on some Cross-technology links: one sent for the LLDP session
+nodes on some cross-technology Ethernet links: one sent for the LLDP session
 configured at LAG member (Aggregation Port)level and another one for
 the LLDP session configured at LAG group (Aggregated Port)level. This
 could cause some issues when LLDP snooping is used to discover the
-Cross-technology links, as defined in <a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>.<a href="#section-4.7-9" class="pilcrow">¶</a></p>
-<p id="section-4.7-10">The Cross-technology link discovery is based only on the LLDP session
+cross-technology Ethernet links, as defined in <a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>.<a href="#section-4.7-9" class="pilcrow">¶</a></p>
+<p id="section-4.7-10">The cross-technology Ethernet link discovery is based only on the LLDP session
 configured on the LAG members (Aggregation Ports) to allow discovery
 of these links independently from the configuration of the underlay
 optical tunnel or from the LAG group.<a href="#section-4.7-10" class="pilcrow">¶</a></p>
@@ -3268,7 +3268,7 @@ field in the Link Aggregation TLV defined in Annex F of <span>[<a href="#IEEE_80
 that allow the optical node to identify which LLDP packets
 belong to which LLDP session: the O-PNC can then use only the LLDP
 information from the LLDP sessions configured on the LAG members to
-support the Cross-technology link discovery mechanisms defined in <a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>.<a href="#section-4.7-12" class="pilcrow">¶</a></p>
+support the cross-technology Ethernet link discovery mechanisms defined in <a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>.<a href="#section-4.7-12" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="vpn-discovery">
@@ -3459,7 +3459,7 @@ tunnel.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 requires the O-PNC to setup the  optical tunnel (using either the WDM
 Tunnel model or the OTN Tunnel model, if the optional OTN switching
 is supported) within the optical network and to steer the client
-traffic between the two Cross-technology links over that optical tunnel,
+traffic between the two cross-technology Ethernet links over that optical tunnel,
 using either the Ethernet Client Signal Model (for frame-based
 transport) or the Transparent CBR Client Signal Model (for
 transparent transport).<a href="#section-5.2-2" class="pilcrow">¶</a></p>
@@ -3553,7 +3553,7 @@ can configure this multi-technology single-domain Ethernet link at the MPI
 of the P-PNC.<a href="#section-5.2-8" class="pilcrow">¶</a></p>
 <p id="section-5.2-9">The two Ethernet LTPs terminating this multi-technology single-domain
 Ethernet link are supported by the two underlay Ethernet LTPs
-terminating the two Cross-technology links, e.g., the LTP 5-1 on PE13 and
+terminating the two cross-technology Ethernet links, e.g., the LTP 5-1 on PE13 and
 6-1 on BR11 shown in <a href="#fig-multi-technology-link-2" class="auto internal xref">Figure 11</a>.<a href="#section-5.2-9" class="pilcrow">¶</a></p>
 <p id="section-5.2-10">After the multi-technology single-domain Ethernet link has been configured
 by the MDSC or discovered by the P-PNC, the corresponding multi-technology
@@ -3784,7 +3784,7 @@ has been proposed to resolve it;<a href="#section-6-3.3.1" class="pilcrow">¶</a
 </li>
         <li class="normal" id="section-6-3.4">
           <p id="section-6-3.4.1">relationship between a common discovery mechanisms applicable to
-access links, inter-domain IP links and Cross-technology links and the
+access links, inter-domain IP links and cross-technology Ethernet links and the
 UNI topology discover mechanism defined in <span>[<a href="#RFC9408" class="cite xref">RFC9408</a>]</span>: this gap has
 been identified in <a href="#packet-topology-discovery" class="auto internal xref">Section 4.3</a>;<a href="#section-6-3.4.1" class="pilcrow">¶</a></p>
 </li>
