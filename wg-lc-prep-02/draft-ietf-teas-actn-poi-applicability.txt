@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 20 December 2024                                       Vodafone
+Expires: 4 January 2025                                         Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                            18 June 2024
+                                                             3 July 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 December 2024.
+   This Internet-Draft will expire on 4 January 2025.
 
 Copyright Notice
 
@@ -245,13 +245,13 @@ Table of Contents
       interface towards the CE (e.g.  VLAN, IP address, routing protocol
       etc.).
 
-   Technology domain:  shot for "switching technology domain", defined
+   Technology domain:  short for "switching technology domain", defined
       as "region" in [RFC5212], where the term "region" is applied to
       (GMPLS) control domains.
 
    PNC Domain:  part of the network under control of a single PNC
       instance.  It is subject to the capabilities of the PNC which
-      technologies are controlled.
+      technology is controlled.
 
    Port:  The physical entity that transmits and receives physical
       signals.
@@ -270,8 +270,8 @@ Table of Contents
 
    Ethernet link:  A link between two Ethernet interfaces.
 
-   Single-technology Ethernet link:  An Ethernet link between between
-      two Ethernet interfaces on physically adjacent IP routers.
+   Single-technology Ethernet link:  An Ethernet link between two
+      Ethernet interfaces on physically adjacent IP routers.
 
    Multi-technology Ethernet link:  An Ethernet link between between two
       Ethernet interfaces on logically adjacent IP routers, which is
@@ -291,7 +291,7 @@ Table of Contents
 
    Multi-technology intra-domain Ethernet link:  An Ethernet link
       between between two Ethernet interfaces on logically adjacent IP
-      routers that belong tot he same P-PNC domain, which is supported
+      routers that belong to the same P-PNC domain, which is supported
       by supported by two cross-technology Ethernet links and an optical
       tunnel in between.
 
@@ -303,8 +303,8 @@ Table of Contents
    Inter-domain IP link:  An IP link supported by an inter-domain
       Ethernet link.
 
-   Multi-technology intra-domain IP link:  An IP link supported a multi-
-      technology intra-domain Ethernet link.
+   Multi-technology intra-domain IP link:  An IP link supported by a
+      multi-technology intra-domain Ethernet link.
 
 2.  Reference Network Architecture
 
@@ -1100,7 +1100,7 @@ Table of Contents
 
    *  the network topology, at both optical and IP layers, in terms of
       nodes and links, including the access links, inter-domain IP links
-      as well as Cross-technology links;
+      as well as cross-technology Ethernet links;
 
    *  the optical tunnels supporting multi-technology intra-domain IP
       links;
@@ -1144,7 +1144,7 @@ Table of Contents
    optical layers (e.g., which port, lambda/OTSi, and direction are used
    by a specific IP service on the WDM equipment).
 
-   In particular, for the Cross-technology links, it is key for MDSC to
+   In particular, for the cross-technology links, it is key for MDSC to
    automatically correlate the information from the PNC network
    databases about the physical ports from the routers (single link or
    bundle links for LAG) to client ports in the ROADM.
@@ -1516,7 +1516,7 @@ Table of Contents
 
    It is worth noting that the discovery of Cross-technology links is
    based only on the LLDP information sent by the Ethernet interfaces of
-   the routers and received by the Ethernet interfaces of the optical
+   the routers and snooped by the Ethernet interfaces of the optical
    nodes.  Therefore the MDSC can discover these links also before
    optical paths, supporting overlay multi-technology IP links, are
    setup.
@@ -1608,16 +1608,16 @@ Table of Contents
       Ethernet LTP 4-1 on BR21, as shown in Figure 7.
 
    It is worth noting that in case of an inter-domain Ethernet links,
-   the MDSC cannot discover, using the the LLDP information reported in
-   the plug-id attributes, the physical adjacency between the two
-   Ethernet interfaces on physically adjacent IP routers, because these
-   two plug-id values do not match, such as the plug-id values {BR11,3}
-   and {BR21,4} shown in Figure 7.  However, the MDSC may infer the
-   physical intra-domain Ethernet links if it knows a priori, using
-   mechanisms which are outside the scope of this document, that the
-   Ethernet interfaces on the IP routers either terminates a cross-
-   technology link or a single-technology (intra-domain or inter-domain)
-   Ethernet link, e.g., as shown in Figure 7.
+   the MDSC cannot discover, using the LLDP information reported in the
+   plug-id attributes, the physical adjacency between the two Ethernet
+   interfaces on physically adjacent IP routers, because these two plug-
+   id values do not match, such as the plug-id values {BR11,3} and
+   {BR21,4} shown in Figure 7.  However, the MDSC may infer the physical
+   intra-domain Ethernet links if it knows a priori, using mechanisms
+   which are outside the scope of this document, that the Ethernet
+   interfaces on the IP routers either terminates a cross-technology
+   link or a single-technology (intra-domain or inter-domain) Ethernet
+   link, e.g., as shown in Figure 7.
 
    The P-PNC can omit reporting the physical Ethernet LTPs when it
    knows, by mechanisms which are outside the scope of this document,
@@ -1711,9 +1711,9 @@ Table of Contents
    links are discovered by the PNC.
 
    In addition, the P-PNC also reports the physical Ethernet LTPs that
-   terminate the Cross-technology links supporting the multi-technology
-   intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on PE13 and
-   the Ethernet LTP 6-0 on BR11, shown in Figure 8.
+   terminate the cross-technology Ethernet links supporting the multi-
+   technology intra-domain Ethernet links, e.g., the Ethernet LTP 5-0 on
+   PE13 and the Ethernet LTP 6-0 on BR11, shown in Figure 8.
 
    The MDSC discovers, using the mechanisms described in Section 4.5,
    which Ethernet Cross-technology links support the multi-technology
@@ -2617,9 +2617,9 @@ Table of Contents
               Zheng, H., Busi, I., Liu, X., Belotti, S., and O. G. de
               Dios, "A YANG Data Model for Optical Transport Network
               Topology", Work in Progress, Internet-Draft, draft-ietf-
-              ccamp-otn-topo-yang-18, 19 April 2024,
+              ccamp-otn-topo-yang-19, 25 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-topo-yang-18>.
+              otn-topo-yang-19>.
 
    [I-D.ietf-ccamp-otn-tunnel-model]
               Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
@@ -2640,9 +2640,9 @@ Table of Contents
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
               C., and O. G. de Dios, "YANG Data Model for Layer 3 TE
               Topologies", Work in Progress, Internet-Draft, draft-ietf-
-              teas-yang-l3-te-topo-16, 2 March 2024,
+              teas-yang-l3-te-topo-17, 23 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-l3-te-topo-16>.
+              yang-l3-te-topo-17>.
 
    [I-D.ietf-teas-yang-path-computation]
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
@@ -2815,16 +2815,16 @@ Table of Contents
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              15, 20 May 2024, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-rtgwg-segment-routing-ti-lfa-15>.
+              16, 29 June 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-rtgwg-segment-routing-ti-lfa-16>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
               Yoon, "A YANG Data Model for Virtual Network (VN)
               Operations", Work in Progress, Internet-Draft, draft-ietf-
-              teas-actn-vn-yang-28, 8 June 2024,
+              teas-actn-vn-yang-29, 22 June 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              actn-vn-yang-28>.
+              actn-vn-yang-29>.
 
    [I-D.ietf-teas-te-service-mapping-yang]
               Lee, Y., Dhody, D., Fioccola, G., Wu, Q., Ceccarelli, D.,
