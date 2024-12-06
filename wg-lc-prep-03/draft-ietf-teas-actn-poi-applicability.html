@@ -22,13 +22,13 @@ multi-technology (packet over optical) scenario with a specific focus on
 the MPI (Multi-Domain Service Coordinator to Provisioning Network
 Controllers Interface)in the ACTN architecture. 
     " name="description">
-<meta content="xml2rfc 3.24.0" name="generator">
+<meta content="xml2rfc 3.25.0" name="generator">
 <meta content="next generation" name="keyword">
 <meta content="unicorn" name="keyword">
 <meta content="sparkling distributed ledger" name="keyword">
 <meta content="draft-ietf-teas-actn-poi-applicability-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.24.0
+  xml2rfc 3.25.0
     Python 3.12.7
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
@@ -1055,11 +1055,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">ACTN POI</td>
-<td class="right">November 2024</td>
+<td class="right">December 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Peruzzini, et al.</td>
-<td class="center">Expires 25 May 2025</td>
+<td class="center">Expires 9 June 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1072,12 +1072,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-teas-actn-poi-applicability-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-11-21" class="published">21 November 2024</time>
+<time datetime="2024-12-06" class="published">6 December 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-05-25">25 May 2025</time></dd>
+<dd class="expires"><time datetime="2025-06-09">9 June 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1152,7 +1152,7 @@ Controllers Interface)in the ACTN architecture.<a href="#section-abstract-2" cla
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 25 May 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 9 June 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1522,7 +1522,7 @@ configuration (on the PE side) of the interface towards the CE
           <dd class="break"></dd>
 <dt id="section-1.1-3.23">Multi-technology Ethernet link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.24">
-            <p id="section-1.1-3.24.1">An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers, which is supported by an underlay tunnel in a different technology domain.<a href="#section-1.1-3.24.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.24.1">An Ethernet link between two Ethernet interfaces on logically adjacent IP routers, which is supported by two cross-technology Ethernet links and an optical tunnel in between.<a href="#section-1.1-3.24.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-1.1-3.25">Cross-technology Ethernet link:</dt>
@@ -1532,17 +1532,17 @@ configuration (on the PE side) of the interface towards the CE
           <dd class="break"></dd>
 <dt id="section-1.1-3.27">Inter-domain Ethernet link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.28">
-            <p id="section-1.1-3.28.1">An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to different P-PNC domains.<a href="#section-1.1-3.28.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.28.1">An Ethernet link between two Ethernet interfaces on physically adjacent IP routers that belong to different P-PNC domains.<a href="#section-1.1-3.28.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-1.1-3.29">Single-technology intra-domain Ethernet link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.30">
-            <p id="section-1.1-3.30.1">An Ethernet link between between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.<a href="#section-1.1-3.30.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.30.1">An Ethernet link between two Ethernet interfaces on physically adjacent IP routers that belong to the same P-PNC domain.<a href="#section-1.1-3.30.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-1.1-3.31">Multi-technology intra-domain Ethernet link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.32">
-            <p id="section-1.1-3.32.1">An Ethernet link between between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by supported by two cross-technology Ethernet links and an optical tunnel in between.<a href="#section-1.1-3.32.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.32.1">An Ethernet link between two Ethernet interfaces on logically adjacent IP routers that belong to the same P-PNC domain, which is supported by two cross-technology Ethernet links and an optical tunnel in between.<a href="#section-1.1-3.32.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-1.1-3.33">IP link:</dt>
@@ -1550,14 +1550,14 @@ configuration (on the PE side) of the interface towards the CE
             <p id="section-1.1-3.34.1">A link between two IP interfaces.<a href="#section-1.1-3.34.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-3.35">Single-technology intra-domain IP link:</dt>
+<dt id="section-1.1-3.35">Inter-domain IP link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.36">
-            <p id="section-1.1-3.36.1">An IP link supported by a single-technology intra-domain Ethernet link.<a href="#section-1.1-3.36.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.36.1">An IP link supported by an inter-domain Ethernet link.<a href="#section-1.1-3.36.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-1.1-3.37">Inter-domain IP link:</dt>
+<dt id="section-1.1-3.37">Single-technology intra-domain IP link:</dt>
           <dd style="margin-left: 1.5em" id="section-1.1-3.38">
-            <p id="section-1.1-3.38.1">An IP link supported by an inter-domain Ethernet link.<a href="#section-1.1-3.38.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-3.38.1">An IP link supported by a single-technology intra-domain Ethernet link.<a href="#section-1.1-3.38.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-1.1-3.39">Multi-technology intra-domain IP link:</dt>
@@ -1676,20 +1676,18 @@ The reason is that most operators are not yet ready to manage packet
 and optical networks in a single unified domain. Therefore, a unified
 use case analysis is outside the scope of this document.<a href="#section-2-9" class="pilcrow">¶</a></p>
 <p id="section-2-10">This document analyses scenarios where all the multi-technology IP links,
-supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-technology links supported by Ethernet
-physical links.<a href="#section-2-10" class="pilcrow">¶</a></p>
-<p id="section-2-11">The analysis of scenarios with multi-technology inter-domain IP links is
-outside the scope of this document.<a href="#section-2-11" class="pilcrow">¶</a></p>
-<p id="section-2-12">Therefore, if inter-domain links between the optical domains exist,
+supported by the optical network, are intra-domain (intra-AS/intra-area), such as PE-BR, PE-P, BR-P, P-P IP links. Therefore the inter-domain IP links are always single-technology links supported by single-technology Ethernet
+links between physically adjacent IP routers.<a href="#section-2-10" class="pilcrow">¶</a></p>
+<p id="section-2-11">Therefore, if inter-domain links between the optical domains exist,
 they would be used to support multi-domain optical services, which
-are outside the scope of this document.<a href="#section-2-12" class="pilcrow">¶</a></p>
-<p id="section-2-13">The optical nodes within the optical domains can be either:<a href="#section-2-13" class="pilcrow">¶</a></p>
+are outside the scope of this document.<a href="#section-2-11" class="pilcrow">¶</a></p>
+<p id="section-2-12">The optical nodes within the optical domains can be either:<a href="#section-2-12" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-14.1">
-          <p id="section-2-14.1.1">WDM nodes, as defined in <span>[<a href="#I-D.ietf-ccamp-optical-impairment-topology-yang" class="cite xref">I-D.ietf-ccamp-optical-impairment-topology-yang</a>]</span>, with an integrated ROADM functions and with or without integrated optical transponders;<a href="#section-2-14.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-2-13.1">
+          <p id="section-2-13.1.1">WDM nodes, as defined in <span>[<a href="#I-D.ietf-ccamp-optical-impairment-topology-yang" class="cite xref">I-D.ietf-ccamp-optical-impairment-topology-yang</a>]</span>, with an integrated ROADM functions and with or without integrated optical transponders;<a href="#section-2-13.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-14.2">
-          <p id="section-2-14.2.1">OTN nodes, with integrated an OTN cross-connect function and with or without integrated ROADM functions or optical transponders.<a href="#section-2-14.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-2-13.2">
+          <p id="section-2-13.2.1">OTN nodes, with integrated an OTN cross-connect function and with or without integrated ROADM functions or optical transponders.<a href="#section-2-13.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <div id="mdsc-overview">
@@ -2971,7 +2969,7 @@ Ethernet LTP 3-1, supported by LTP 3-0, shown in <a href="#fig-inter-domain-link
 Ethernet interface on an IP router and the Ethernet interface on its physically adjacent node,
 which can be either an IP router
 (in case of a single-technology Ethernet link) or an optical
-node (in case of a multi-technology Ethernet link).
+node (in case of a cross-technology Ethernet link).
 Therefore, as described in <a href="#cross-technology-link-discovery" class="auto internal xref">Section 4.5.1</a>, the P-PNC reports,
 within the plug-id attribute of this LTP, the LLDP information
 sent by the corresponding Ethernet interface on the IP router; such as the
@@ -3982,7 +3980,7 @@ connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-otn-tunnel-model">[I-D.ietf-ccamp-otn-tunnel-model]</dt>
         <dd>
-<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Lopez, V.</span>, and <span class="refAuthor">Y. Xu</span>, <span class="refTitle">"OTN Tunnel YANG Model"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-21</span>, <time datetime="2024-06-06" class="refDate">6 June 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-21">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-21</a>&gt;</span>. </dd>
+<span class="refAuthor">Zheng, H.</span>, <span class="refAuthor">Busi, I.</span>, <span class="refAuthor">Belotti, S.</span>, <span class="refAuthor">Lopez, V.</span>, and <span class="refAuthor">Y. Xu</span>, <span class="refTitle">"A YANG Data Model for Optical Transport Network (OTN) Tunnels and Label Switched Paths"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-22</span>, <time datetime="2024-12-03" class="refDate">3 December 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-22">https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-otn-tunnel-model-22</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-ccamp-wdm-tunnel-yang">[I-D.ietf-ccamp-wdm-tunnel-yang]</dt>
         <dd>
@@ -4111,7 +4109,7 @@ connectivity and resource requests.<a href="#section-7-3" class="pilcrow">¶</a>
 <dd class="break"></dd>
 <dt id="I-D.ietf-rtgwg-segment-routing-ti-lfa">[I-D.ietf-rtgwg-segment-routing-ti-lfa]</dt>
         <dd>
-<span class="refAuthor">Bashandy, A.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Filsfils, C.</span>, <span class="refAuthor">Francois, P.</span>, <span class="refAuthor">Decraene, B.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"Topology Independent Fast Reroute using Segment Routing"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-18</span>, <time datetime="2024-11-13" class="refDate">13 November 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-18">https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-18</a>&gt;</span>. </dd>
+<span class="refAuthor">Bashandy, A.</span>, <span class="refAuthor">Litkowski, S.</span>, <span class="refAuthor">Filsfils, C.</span>, <span class="refAuthor">Francois, P.</span>, <span class="refAuthor">Decraene, B.</span>, and <span class="refAuthor">D. Voyer</span>, <span class="refTitle">"Topology Independent Fast Reroute using Segment Routing"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-19</span>, <time datetime="2024-11-22" class="refDate">22 November 2024</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-19">https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-segment-routing-ti-lfa-19</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-teas-actn-vn-yang">[I-D.ietf-teas-actn-vn-yang]</dt>
         <dd>

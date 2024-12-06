@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 25 May 2025                                            Vodafone
+Expires: 9 June 2025                                            Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                        21 November 2024
+                                                         6 December 2024
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 May 2025.
+   This Internet-Draft will expire on 9 June 2025.
 
 Copyright Notice
 
@@ -273,35 +273,35 @@ Table of Contents
    Single-technology Ethernet link:  An Ethernet link between two
       Ethernet interfaces on physically adjacent IP routers.
 
-   Multi-technology Ethernet link:  An Ethernet link between between two
+   Multi-technology Ethernet link:  An Ethernet link between two
       Ethernet interfaces on logically adjacent IP routers, which is
-      supported by an underlay tunnel in a different technology domain.
+      supported by two cross-technology Ethernet links and an optical
+      tunnel in between.
 
    Cross-technology Ethernet link:  An Ethernet link between an Ethernet
       interface on an IP router and an Ethernet interface on a
       physically adjacent optical node.
 
-   Inter-domain Ethernet link:  An Ethernet link between between two
-      Ethernet interfaces on physically adjacent IP routers that belong
-      to different P-PNC domains.
+   Inter-domain Ethernet link:  An Ethernet link between two Ethernet
+      interfaces on physically adjacent IP routers that belong to
+      different P-PNC domains.
 
    Single-technology intra-domain Ethernet link:  An Ethernet link
-      between between two Ethernet interfaces on physically adjacent IP
-      routers that belong to the same P-PNC domain.
+      between two Ethernet interfaces on physically adjacent IP routers
+      that belong to the same P-PNC domain.
 
    Multi-technology intra-domain Ethernet link:  An Ethernet link
-      between between two Ethernet interfaces on logically adjacent IP
-      routers that belong to the same P-PNC domain, which is supported
-      by supported by two cross-technology Ethernet links and an optical
-      tunnel in between.
+      between two Ethernet interfaces on logically adjacent IP routers
+      that belong to the same P-PNC domain, which is supported by two
+      cross-technology Ethernet links and an optical tunnel in between.
 
    IP link:  A link between two IP interfaces.
 
-   Single-technology intra-domain IP link:  An IP link supported by a
-      single-technology intra-domain Ethernet link.
-
    Inter-domain IP link:  An IP link supported by an inter-domain
       Ethernet link.
+
+   Single-technology intra-domain IP link:  An IP link supported by a
+      single-technology intra-domain Ethernet link.
 
    Multi-technology intra-domain IP link:  An IP link supported by a
       multi-technology intra-domain Ethernet link.
@@ -402,10 +402,8 @@ Table of Contents
    links, supported by the optical network, are intra-domain (intra-AS/
    intra-area), such as PE-BR, PE-P, BR-P, P-P IP links.  Therefore the
    inter-domain IP links are always single-technology links supported by
-   Ethernet physical links.
-
-   The analysis of scenarios with multi-technology inter-domain IP links
-   is outside the scope of this document.
+   single-technology Ethernet links between physically adjacent IP
+   routers.
 
    Therefore, if inter-domain links between the optical domains exist,
    they would be used to support multi-domain optical services, which
@@ -1588,7 +1586,7 @@ Table of Contents
       Ethernet interface on an IP router and the Ethernet interface on
       its physically adjacent node, which can be either an IP router (in
       case of a single-technology Ethernet link) or an optical node (in
-      case of a multi-technology Ethernet link).  Therefore, as
+      case of a cross-technology Ethernet link).  Therefore, as
       described in Section 4.5.1, the P-PNC reports, within the plug-id
       attribute of this LTP, the LLDP information sent by the
       corresponding Ethernet interface on the IP router; such as the
@@ -2631,11 +2629,12 @@ Table of Contents
               otn-topo-yang-20>.
 
    [I-D.ietf-ccamp-otn-tunnel-model]
-              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu,
-              "OTN Tunnel YANG Model", Work in Progress, Internet-Draft,
-              draft-ietf-ccamp-otn-tunnel-model-21, 6 June 2024,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              otn-tunnel-model-21>.
+              Zheng, H., Busi, I., Belotti, S., Lopez, V., and Y. Xu, "A
+              YANG Data Model for Optical Transport Network (OTN)
+              Tunnels and Label Switched Paths", Work in Progress,
+              Internet-Draft, draft-ietf-ccamp-otn-tunnel-model-22, 3
+              December 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-ccamp-otn-tunnel-model-22>.
 
    [I-D.ietf-ccamp-wdm-tunnel-yang]
               Guo, A., Belotti, S., Galimberti, G., de Madrid, U. A.,
@@ -2824,9 +2823,9 @@ Table of Contents
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              18, 13 November 2024,
+              19, 22 November 2024,
               <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
-              segment-routing-ti-lfa-18>.
+              segment-routing-ti-lfa-19>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
