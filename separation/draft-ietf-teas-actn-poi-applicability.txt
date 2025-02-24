@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 3 August 2025                                          Vodafone
+Expires: 28 August 2025                                         Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                         30 January 2025
+                                                        24 February 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 August 2025.
+   This Internet-Draft will expire on 28 August 2025.
 
 Copyright Notice
 
@@ -180,10 +180,10 @@ Table of Contents
    This separation is inefficient for several reasons.  First,
    integrating packet and optical networks can significantly reduce both
    capital expenditures (CAPEX) and operational expenditures (OPEX).
-   Second, multi-technology online topology insights can accelerate
-   troubleshooting (e.g., alarm correlation) and improve network
-   operations (e.g., coordination of maintenance events), while multi-
-   technology offline topology inventories can enhance service quality
+   Second, multi-technology topology insight can speed up
+   troubleshooting (e.g., alarm correlation) and network operation
+   (e.g., coordination of maintenance events), and detailed inventory
+   and planning information can also improve service assurance quality
    (e.g., detection of diversity constraint violations).  Third, multi-
    technology traffic engineering enables more efficient use of
    available network capacity (e.g., coordination of restoration).
@@ -252,7 +252,7 @@ Table of Contents
       policies configuration) and the network transport layer (e.g.
       RSVP-TE Label Switched Paths (LSPs).  This includes the
       configuration (on the PE side) of the interface towards the CE
-      (e.g.  VLAN, IP address, routing protocol, etc.).
+      (e.g. VLAN, IP address, routing protocol, etc.).
 
    Technology domain:  short for "switching technology domain", defined
       as "region" in [RFC5212], where the term "region" is applied to
@@ -651,7 +651,7 @@ Table of Contents
 
    1.  The customer is asking for VPN isolation to dynamically create
        and bind tunnels to the service so that they are not shared by
-       other services (e.g.  VPN).
+       other services (e.g. VPN).
 
        The level of isolation can be different:
 
@@ -2610,9 +2610,9 @@ Table of Contents
               Zheng, H., Guo, A., Busi, I., Snitser, A., and C. Yu, "A
               YANG Data Model for Transport Network Client Signals",
               Work in Progress, Internet-Draft, draft-ietf-ccamp-client-
-              signal-yang-13, 1 August 2024,
+              signal-yang-14, 4 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-
-              client-signal-yang-13>.
+              client-signal-yang-14>.
 
    [I-D.ietf-ccamp-eth-client-te-topo-yang]
               Yu, C., Zheng, H., Guo, A., Busi, I., Xu, Y., Zhao, Y.,
@@ -2666,9 +2666,9 @@ Table of Contents
               Busi, I., Belotti, S., de Dios, O. G., Sharma, A., and Y.
               Shi, "A YANG Data Model for requesting path computation",
               Work in Progress, Internet-Draft, draft-ietf-teas-yang-
-              path-computation-23, 19 August 2024,
+              path-computation-24, 13 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-teas-
-              yang-path-computation-23>.
+              yang-path-computation-24>.
 
    [I-D.ietf-teas-yang-sr-te-topo]
               Liu, X., Bryskin, I., Beeram, V. P., Saad, T., Shah, H.
@@ -2833,9 +2833,9 @@ Table of Contents
               Decraene, B., and D. Voyer, "Topology Independent Fast
               Reroute using Segment Routing", Work in Progress,
               Internet-Draft, draft-ietf-rtgwg-segment-routing-ti-lfa-
-              19, 22 November 2024,
+              21, 12 February 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-
-              segment-routing-ti-lfa-19>.
+              segment-routing-ti-lfa-21>.
 
    [I-D.ietf-teas-actn-vn-yang]
               Lee, Y., Dhody, D., Ceccarelli, D., Bryskin, I., and B. Y.
@@ -2961,12 +2961,12 @@ A.1.  OSS/Orchestration Layer
    *  to abstract (through MDSC and PNCs) the underlying transport
       network complexity to the Business Systems Support layer;
 
-   *  to coordinate NFV, Transport (e.g.  IP, optical and microwave
+   *  to coordinate NFV, Transport (e.g. IP, optical and microwave
       networks), Fixed Acess, Core and Radio domains enabling full
       automation of end-to-end services to the end customers;
 
    *  to enable catalogue-driven service provisioning from external
-      applications (e.g.  Customer Portal for Enterprise Business
+      applications (e.g. Customer Portal for Enterprise Business
       services), orchestrating the design and lifecycle management of
       these end-to-end transport connectivity services, consuming IP
       and/or optical transport connectivity services upon request.
@@ -2990,7 +2990,7 @@ A.1.1.  MDSC NBI
    Although the OSS/Orchestration layer interface is usually operator-
    specific, typically it would be using a RESTCONF/YANG interface with
    a more abstracted version of the MPI YANG data models used for
-   network configuration (e.g.  L3NM, L2NM).
+   network configuration (e.g. L3NM, L2NM).
 
    Figure 12 shows an example of possible control flow between the OSS/
    Orchestration layer and the MDSC to instantiate L2/L3 VPN network
