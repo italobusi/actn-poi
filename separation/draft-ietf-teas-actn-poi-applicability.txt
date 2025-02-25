@@ -180,7 +180,7 @@ Table of Contents
    This separation is inefficient for several reasons.  Firstly,
    integrating packet and optical networks can significantly reduce both
    capital expenditures (CAPEX) and operational expenditures (OPEX).
-   Second, multi-technology topology insights can optimize
+   Secondly, multi-technology topology insights can optimize
    troubleshooting (e.g., alarm correlation) and enhance network
    operation (e.g., coordination of maintenance events).  Additionally,
    detailed inventory and planning information can also improve service
