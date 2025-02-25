@@ -5,14 +5,14 @@
 Traffic Engineering Architecture and Signaling              F. Peruzzini
 Internet-Draft                                                       TIM
 Intended status: Informational                            J.-F. Bouquier
-Expires: 28 August 2025                                         Vodafone
+Expires: 29 August 2025                                         Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                        24 February 2025
+                                                        25 February 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 August 2025.
+   This Internet-Draft will expire on 29 August 2025.
 
 Copyright Notice
 
@@ -177,19 +177,20 @@ Table of Contents
    As a consequence, in many existing network deployments, packet and
    optical networks are engineered and operated independently.
 
-   This separation is inefficient for several reasons.  First,
+   This separation is inefficient for several reasons.  Firstly,
    integrating packet and optical networks can significantly reduce both
    capital expenditures (CAPEX) and operational expenditures (OPEX).
-   Second, multi-technology topology insight can speed up
-   troubleshooting (e.g., alarm correlation) and network operation
-   (e.g., coordination of maintenance events), and detailed inventory
-   and planning information can also improve service assurance quality
-   (e.g., detection of diversity constraint violations).  Third, multi-
-   technology traffic engineering enables more efficient use of
-   available network capacity (e.g., coordination of restoration).
-   Furthermore, provisioning workflows can be simplified or automated
-   across layers, facilitating capabilities such as bandwidth-on-demand
-   and streamlined maintenance activities.
+   Second, multi-technology topology insights can optimize
+   troubleshooting (e.g., alarm correlation) and enhance network
+   operation (e.g., coordination of maintenance events).  Additionally,
+   detailed inventory and planning information can also improve service
+   assurance quality, such as detecting constraint violations or lack of
+   resource diversity.  Thirdly, multi-technology traffic engineering
+   enables more efficient use of available network capacity (e.g.,
+   coordination of restoration).  Furthermore, provisioning workflows
+   can be simplified or automated across layers, facilitating
+   capabilities such as bandwidth-on-demand and streamlined maintenance
+   activities.
 
    The ACTN framework facilitates seamless integration of packet and
    optical networks across multiple technologies and vendors.  This is
