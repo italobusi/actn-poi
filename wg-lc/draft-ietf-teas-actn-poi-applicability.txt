@@ -5,14 +5,14 @@
 TEAS Working Group                                          F. Peruzzini
 Internet-Draft                                                  FiberCop
 Intended status: Informational                            J.-F. Bouquier
-Expires: 19 June 2026                                           Vodafone
+Expires: 22 June 2026                                           Vodafone
                                                                  I. Busi
                                                                   Huawei
                                                                  D. King
                                                       Old Dog Consulting
                                                            D. Ceccarelli
                                                                    Cisco
-                                                        16 December 2025
+                                                        19 December 2025
 
 
 Applicability of Abstraction and Control of Traffic Engineered Networks
@@ -67,7 +67,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 June 2026.
+   This Internet-Draft will expire on 22 June 2026.
 
 Copyright Notice
 
@@ -250,10 +250,10 @@ Table of Contents
 
    Network service:  Per [RFC8309], a network service provides
       Connectivity between customer sites and the Internet or between
-      customer sites across the network operator's network and across
-      the Internet.  In the context of this document, a network service
-      is enabled by Provider Edge (PE) to PE configuration, including
-      both the network service layer (VRFs, RT import/export policies
+      customer sites across the operator's network and across the
+      Internet.  In the context of this document, a network service is
+      enabled by Provider Edge (PE) to PE configuration, including both
+      the network service layer (VRFs, RT import/export policies
       configuration) and the network transport layer (e.g., RSVP-TE
       Label Switched Paths (LSPs)).  This includes the configuration (on
       the PE side) of the interface towards the CE (e.g., VLAN, IP
@@ -668,7 +668,7 @@ Table of Contents
    2.  The L2/L3 VPN is bound to a set of dedicated TE tunnels, which
        can compete for bandwidth with other tunnels.
 
-   3.  The L2/L3 VPN is bound to a set of TE tunnels which can shared
+   3.  The L2/L3 VPN is bound to a set of TE tunnels which can be shared
        with other services.
 
    4.  The customer does not require isolation and may request a VPN
