@@ -22,3 +22,4 @@ draft-ietf-teas-actn-poi-applicability.xml
 package-lock.json
 report.xml
 !requirements.txt
+!figures/*
